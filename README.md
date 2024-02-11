@@ -1,5 +1,5 @@
 # PyPDF  
-PyPDF is a free and open-source PDF toolkit, proficient in multitudes of manipulations such as splitting, merging, cropping and transforming pages within PDF files. Additionally, it can add custon date, viewing preferences, and password protection to these files. PyPDF can retrive text and metadata from PDFs as well.  
+PyPDF is a free and open-source PDF toolkit, proficient in multitudes of manipulations such as splitting, merging, cropping and transforming pages within PDF files. Additionally, it can add custom date, viewing preferences, and password protection to these files. PyPDF can retrive text and metadata from PDFs as well.  
 
 ## Installation
 One can install pypdf using the follwing pip install:
