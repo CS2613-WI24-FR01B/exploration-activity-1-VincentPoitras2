@@ -79,3 +79,39 @@ with open("encrypted-pdf.pdf", "wb") as f:
     writer.write(f)
 ```
 
+## Sample Input Output
+The input pdf file is the course syllabus for CS2613
+```
+from pypdf import PdfWriter, PdfReader
+
+reader = PdfReader("inputpdf.pdf")
+writer = PdfWriter("output.pdf")
+
+# Rotates page 1
+writer.add_page(reader.pages[0])
+writer.pages[0].rotate(90)
+
+# Adds cropped page 1
+page1 = reader.pages[0]
+page1.mediabox.upper_right = (
+    page1.mediabox.right / 2,
+    page1.mediabox.top / 2,
+)
+writer.add_page(page1)
+
+
+# Adds page 4
+writer.add_page(reader.pages[3])
+
+# Saves the output to output.pdf
+with open("output.pdf", "wb") as fp:
+    writer.write(fp)
+```
+### Output
+![alt text](page1.png)
+![alt text](page2.png)
+![alt text](page3.png)
+
+## References
+[1] PyPDF Github: [https://github.com/py-pdf/pypdf](https://github.com/py-pdf/pypdf)  
+[2] PyPDF User's Guide [https://pypdf.readthedocs.io/en/stable/index.html](https://pypdf.readthedocs.io/en/stable/index.html)
