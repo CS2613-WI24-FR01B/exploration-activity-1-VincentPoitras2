@@ -95,7 +95,7 @@ for x in range(4):
 with open("nup-dest2.pdf", "wb") as fp:
     writer.write(fp)
 ```
-![alt text](example3.png)
+![alt text](example3.png)  
 This page is not a great example for this application, but it shows how this can be used  
 4.  Removing Images
 ```
