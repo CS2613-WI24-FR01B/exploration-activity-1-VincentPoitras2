@@ -4,7 +4,7 @@ With this package, a few answers had to be answered to futhur understand this pa
 ## What purpose does it serve?
 The purpose for this package is to change, add, transform, basically anything to do with a pdf file. So many things can be done with this program, here are a few examples using the first page of the course syllabus of CS2613:  
 1.  Can provide a pdf's metadata (author, creator, producer, subject, title).  
- ```
+ ```python
  from datetime import datetime
 from pypdf import PdfReader, PdfWriter
 
@@ -43,7 +43,7 @@ with open("meta-pdf.pdf", "wb") as f:
     writer.write(f)
 ```  
 To get the information, use the following code
-```
+```python
 from pypdf import PdfReader
 
 reader = PdfReader("example.pdf")
@@ -60,7 +60,7 @@ print(meta.title)
 ![alt text](example1.png)
 
 2.  Text extraction 
-```
+```python
 from pypdf import PdfReader
 
 reader = PdfReader("example.pdf")
@@ -69,7 +69,7 @@ print(page.extract_text())
 ```
 ![alt text](example2.png)  
 3.  Transforming several pages  
-```
+```python
 from pypdf import PdfReader, PdfWriter, Transformation, PaperSize
 
 # Read source file
@@ -98,7 +98,7 @@ with open("nup-dest2.pdf", "wb") as fp:
 ![alt text](example3.png)  
 This page is not a great example for this application, but it shows how this can be used  
 4.  Removing Images
-```
+```python
 from pypdf import PdfReader, PdfWriter
 
 reader = PdfReader("example.pdf")
