@@ -3,7 +3,7 @@ PyPDF is a free and open-source PDF toolkit, proficient in multitudes of manipul
 
 ## Installation
 One can install pypdf using the follwing pip install:
-```
+```python
 pip install pypdf
 ```  
 
@@ -11,7 +11,7 @@ pip install pypdf
 With this package, there are many different operations that can be done. A few examples can be seen below
 
 ### Merging
-```
+```python 
 from pypdf import PdfWriter
 
 merger = PdfWriter()
@@ -39,7 +39,7 @@ output.close()
 ```
 
 ### Cropping
-```
+```py
 from pypdf import PdfWriter, PdfReader
 
 reader = PdfReader("example.pdf")
@@ -61,7 +61,7 @@ writer.add_page(page3)
 ```
 
 ### Data encryption
-```
+```py
 from pypdf import PdfReader, PdfWriter
 
 reader = PdfReader("example.pdf")
@@ -81,7 +81,7 @@ with open("encrypted-pdf.pdf", "wb") as f:
 
 ## Sample Input Output
 The input pdf file is the course syllabus for CS2613
-```
+```py
 from pypdf import PdfWriter, PdfReader
 
 reader = PdfReader("inputpdf.pdf")
